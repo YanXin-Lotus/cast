@@ -127,6 +127,10 @@ func ToIntE(i interface{}) (int, error) {
 		return int(s), nil
 	case int8:
 		return int(s), nil
+	case uint64:
+		return int(s), nil
+	case uint:
+		return int(s), nil	
 	case string:
 		v, err := strconv.ParseInt(s, 0, 0)
 		if err == nil {
